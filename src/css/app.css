@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Helvetica&display=swap');
+
+h1, h2, h3, h4, h5 {
+  font-family: "Helvetica", Arial, sans-serif;
+}
+
+.socialmedia-links *{
+  margin: 0 5px;
+  font-size: 20px
+}
+
+
+.footer-info *{
+  margin: 0 5px 0 0;
+} 
+
+#favoriteIcon{
+  font-size: 25px;
+
+}
+
+#cuponInput{
+  display: inline !important;
+}
+
+button.gm-ui-hover-effect {
+  visibility: hidden;
+}
+
+/* .container {
+  padding: 30px 0;
+} */
+
+.link {
+  color: black;
+}
+
+.link:hover{
+  text-decoration: none;
+  color: black;
+}
+
+#about {
+  background-image: url("../data/images/about.jpg");
+  height: 300px;
+  position: 'relative';
+  background-repeat: no-repeat;
+  background-size: 'cover';
+  background-position: 50% 70%;
+}
+
+.article {
+  text-decoration: none !important;
+  color: black !important;  
+}
+
+.payment-form input:valid {
+  border-color: green;
+}
+
+#blog {
+  background-image: url("../data/images/blog.jpg");
+  height: 300px;
+  position: 'relative';
+  background-repeat: no-repeat;
+  background-size: 'cover';
+  background-position: 50% 70%;
+}
+
+

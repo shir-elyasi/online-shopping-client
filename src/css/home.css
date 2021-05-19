@@ -1,0 +1,41 @@
+#bedroom {
+    background-image: url("../data/images/bedroom.jpg");
+    background-position: center;
+}
+
+#bathroom {
+    background-image: url("../data/images/bathroom.jpg");
+    background-position: 50% 60%;
+}
+
+#living_room {
+    background-image: url("../data/images/living_room.jpg");
+    background-position: center;
+}
+
+.box {
+    height:300px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#major {
+    background-image: url("../data/images/main.jpg");
+    height: 500px;
+    position: 'relative';
+    background-repeat: no-repeat;
+    background-size: 'cover';
+    background-position: 50% 20%;
+}
+
+#sale {
+    /* background-image: url("../data/images/sale.jpg"); */
+    background-color: #f7ded4;
+    height: 400px;
+    position: 'relative';
+    background-repeat: no-repeat;
+    background-size: 'cover';
+    background-position: 70% 50%;
+}
