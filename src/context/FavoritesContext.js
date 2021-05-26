@@ -1,4 +1,6 @@
-import React, { useContext, useState, useEffect} from 'react';
+import React, { useContext, useState, useEffect, useReducer} from 'react';
+import { initialState, favoritesReducer} from "../reducers/favorites.reducers"
+import { FETCH_DATA_FAVORITES } from "../reducers/favorites.actions"
 
 const FavoritesContext = React.createContext();
 
@@ -8,14 +10,15 @@ export function useFavorites() {
 
 export function FavoritesProvider({children}) {
     const [favoriteProducts, setFavoriteProducts] = useState([]);
+    const [favoritesState, favoritesDispatch] = useReducer(favoritesReducer, initialState);
 
 
     useEffect(() => {
-        const favoriteProducts = JSON.parse(localStorage.getItem('favoriteProducts'));
+        const favoriteProducts = localStorage.getItem('favoriteProducts');
         if (favoriteProducts !== null) {
-            setFavoriteProducts(favoriteProducts)
+            favoritesDispatch({type: FETCH_DATA_FAVORITES, payload: favoriteProducts})
         }
-    }, [])
+    }, [favoritesDispatch])
 
     useEffect(() => {
         localStorage.setItem('favoriteProducts', JSON.stringify(favoriteProducts));
@@ -35,7 +38,9 @@ export function FavoritesProvider({children}) {
 
     const value = {
         favoriteProducts,
-        handleChangeFavorites
+        handleChangeFavorites,
+        favoritesState, 
+        favoritesDispatch
     }
 
     return (

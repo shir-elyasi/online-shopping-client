@@ -75,7 +75,7 @@ export default function Home() {
         <div>
             <div className="container-fluid">
                 <div className="d-flex flex-column align-items-center justify-content-center" id="major">
-                    <h1 className="mb-4">UP TO 30% OFF</h1>
+                    <h1 className="mb-4" style={{fontSize: "80px"}}>UP TO 30% OFF</h1>
                 </div>
             </div>
             <div className="container-fluid py-4">
@@ -107,7 +107,7 @@ export default function Home() {
             <div className="d-flex flex-column align-items-center justify-content-center" id="sale">
                 <div className="text-center">
                     <h1 style={{fontSize: "100px", color: "red"}}>Sale!</h1>
-                    <h1 style={{fontSize: "80px", color: "red"}}>Up to 30%</h1>
+                    <h1 style={{fontSize: "100px", color: "red"}}>Up to 30%</h1>
                 </div>
                 <Link to="/store/sale" style={{color: 'white', textDecoration: 'none'}}>
                     <h1 className="display-3" style={{fontWeight: "400"}}>See Products</h1>
